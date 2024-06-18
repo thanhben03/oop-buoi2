@@ -1,10 +1,11 @@
 public class Motorcycle extends XeCo{
     public Motorcycle(
             String model, String shape, int year, String fuelType,
-            float maxSpeed, double fuel_efficiency, double distanceTraveled
+            float maxSpeed, double fuel_efficiency, double distanceTraveled,
+            float timeTraveled
     )
     {
-        super(model, shape, year, fuelType, maxSpeed, fuel_efficiency, distanceTraveled);
+        super(model, shape, year, fuelType, maxSpeed, fuel_efficiency, distanceTraveled, timeTraveled);
     }
 
     public void getInfo() {
@@ -23,7 +24,8 @@ public class Motorcycle extends XeCo{
     }
 
     public void getDistanceTraveled() {
-        System.out.println("Distance Traveled: " + distanceTraveled + " miles");
+        float distance = maxSpeed * timeTraveled;
+        System.out.println("Distance Traveled: " + distance + " miles");
     }
 
     public void getMaxSpeed() {
